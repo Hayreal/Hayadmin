@@ -8,3 +8,13 @@ spring:
     url: jdbc:mysql://localhost:3306/hay-admin?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
     username: root
     password: root
+
+
+# MyBatis
+mybatis:
+  # 搜索指定包别名
+  type-aliases-package: com.hayreal.**.dao
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  # 加载全局的配置文件
+  config-location: classpath:mybatis/mybatis-config.xml
